@@ -30,7 +30,6 @@ public class Day04 {
     final String logBase = "Part 1 - " + resource.getFilename() + ": ";
     log.debug(logBase + "Start");
     try (BufferedReader reader = new BufferedReader(new FileReader(resource.getFile()))) {
-      MessageDigest md = MessageDigest.getInstance("MD5");
       String line;
       while ((line = reader.readLine()) != null) {
         log.debug(logBase + line);
@@ -56,7 +55,6 @@ public class Day04 {
     final String logBase = "Part 2 - " + resource.getFilename() + ": ";
     log.debug(logBase + "Start");
     try (BufferedReader reader = new BufferedReader(new FileReader(resource.getFile()))) {
-      MessageDigest md = MessageDigest.getInstance("MD5");
       String line;
       while ((line = reader.readLine()) != null) {
         log.debug(logBase + line);
