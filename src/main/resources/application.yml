@@ -3,7 +3,7 @@ logging:
     dev:
       puzzler995:
         aoc2015:
-          Day01: DEBUG
+          Day01: INFO
           Day02: INFO
           Day03: INFO
           Day04: INFO
