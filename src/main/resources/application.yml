@@ -1,0 +1,30 @@
+logging:
+  level:
+    dev:
+      puzzler995:
+        aoc2015:
+          Day01: DEBUG
+          Day02: INFO
+          Day03: INFO
+          Day04: INFO
+          Day05: INFO
+          Day06: INFO
+          Day07: INFO
+          Day08: INFO
+          Day09: INFO
+          Day10: INFO
+          Day11: INFO
+          Day12: INFO
+          Day13: INFO
+          Day14: INFO
+          Day15: INFO
+          Day16: INFO
+          Day17: INFO
+          Day18: INFO
+          Day19: INFO
+          Day20: INFO
+          Day21: INFO
+          Day22: INFO
+          Day23: INFO
+          Day24: INFO
+          Day25: INFO
