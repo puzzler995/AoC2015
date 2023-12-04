@@ -3,18 +3,20 @@ package dev.puzzler995.aoc2015;
 import jakarta.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
-import org.apache.commons.codec.digest.DigestUtils;
 
 @Component
 @Slf4j
 public class Day04 {
+
+  @Value("${settings.runLongRun}")
+  private boolean runLongRun;
+
   @PostConstruct
   public void init() {
     Resource example = new ClassPathResource("day04/example01.txt");
@@ -22,8 +24,10 @@ public class Day04 {
     Resource input = new ClassPathResource("day04/input.txt");
     part1(example);
     part1(example2);
-    part1(input);
-    part2(input);
+    if (runLongRun) {
+      part1(input);
+      part2(input);
+    }
   }
 
   private void part1(Resource resource) {
