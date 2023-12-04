@@ -156,14 +156,16 @@ public class Day07 {
       var wireA = wireMap.get("a");
       var wireB = wireMap.get("b");
       log.debug(logBase + "Wire A: " + wireA.getValue());
-      log.debug(logBase + "Wire B: " + wireB.getValue());
+      log.debug(logBase+ "Wire B: " + wireB.getValue());
+      var val = wireA.getValue();
       wireMap.values().forEach(w -> w.setValue(0));
       wireMap.values().forEach(w -> w.setNeedsForceUpdate(true));
-      wireB.setValue(wireA.getValue());
+      wireB.setValue(val);
       wireB.setNeedsForceUpdate(false);
       wireA.updateValue(true);
-      log.info(logBase + "Wire A: " + wireA.getValue());
+      log.info(logBase + "Wire A: " +wireA.getValue());
     }
+
   }
 
   private enum NodeType {
@@ -241,8 +243,8 @@ public class Day07 {
   private static class Wire extends AbstractValuable {
     private final String name;
     private AbstractValuable input;
-    private boolean needsForceUpdate;
     private List<AbstractValuable> output = new ArrayList<>();
+    private boolean needsForceUpdate;
 
     public Wire(String name) {
       this.name = name;
